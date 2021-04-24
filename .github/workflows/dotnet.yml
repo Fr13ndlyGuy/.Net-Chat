@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore Net Chat Server
+      run: dotnet restore "Net Chat Server"
     - name: Build
       run: dotnet build --no-restore
     - name: Test
