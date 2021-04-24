@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FriendlyGuy\\source\\repos\\Net Chat\\Net Chat.csproj",
-      "projectName": "Net Chat",
-      "projectPath": "C:\\Users\\FriendlyGuy\\source\\repos\\Net Chat\\Net Chat.csproj",
+      "projectUniqueName": "C:\\Users\\FriendlyGuy\\source\\repos\\Net Chat\\Net Chat Server.csproj",
+      "projectName": "Net Chat Server",
+      "projectPath": "C:\\Users\\FriendlyGuy\\source\\repos\\Net Chat\\Net Chat Server.csproj",
       "packagesPath": "C:\\Users\\FriendlyGuy\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\FriendlyGuy\\source\\repos\\Net Chat\\obj\\",
       "projectStyle": "PackageReference",

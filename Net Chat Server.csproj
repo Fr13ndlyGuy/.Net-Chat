@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>Net_Chat</RootNamespace>
+    <RootNamespace>Net_Chat_Server</RootNamespace>
+    <StartupObject>Net_Chat_Server.Program</StartupObject>
   </PropertyGroup>
 
 </Project>
