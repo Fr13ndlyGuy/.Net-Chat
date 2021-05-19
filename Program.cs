@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 
 namespace Net_Chat_Server
 {
@@ -25,28 +26,26 @@ namespace Net_Chat_Server
 
             Console.WriteLine("Working.");
 
-            Console.ReadKey();
+            while (true) {
+                continue;
+            }
 
         }
 
         private static void RequestCompleted(object sender, SocketAsyncEventArgs e)
         {
-            Console.WriteLine("Something Connected!");
-            while (e.AcceptSocket.Connected)
+            try
             {
-                byte[] data = new byte[256];
-                var uwu = e.AcceptSocket.Receive(data);
-                Console.WriteLine(uwu);
-                if (uwu != 0) {
-                    
-                    if (System.Text.Encoding.UTF8.GetString(data).Contains("disconnect")) {
-                        e.AcceptSocket.Disconnect(true);
-                        continue;
-                    }
-                    Console.WriteLine(System.Text.Encoding.UTF8.GetString(data));
-                }
+                Console.WriteLine(string.Format("{0} connected", e.AcceptSocket.RemoteEndPoint.ToString()));
+                Chat.AddUser(new UserData(e.AcceptSocket));
             }
-            Console.WriteLine("Disconnected.");
+            catch (Exception ex)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.WriteLine(string.Format("Error: {0} at {1}", ex.Message, ex.StackTrace));
+
+                Console.ReadKey();
+            }
         }
     }
 }
